@@ -18,12 +18,6 @@ class TodayPresentationController: UIPresentationController {
         _blurView.translatesAutoresizingMaskIntoConstraints = false
         _blurView.frame = view.bounds
         view.addSubview(_blurView)
-//        NSLayoutConstraint.activate([
-//            _blurView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-//            _blurView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-//            _blurView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-//            _blurView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-//        ])
         _blurView.alpha = 0.0
         
         presentingViewController.beginAppearanceTransition(false, animated: false)

@@ -28,7 +28,7 @@ class TodayDetailViewController: UIViewController {
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -66,13 +66,13 @@ extension TodayDetailViewController: UIViewControllerTransitioningDelegate{
         TodayAnimationTransition(animationType: .present)
     }
 
-//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        TodayAnimationTransition(animationType: .dismiss)
-//    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        TodayAnimationTransition(animationType: .dismiss)
+    }
 
-//    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-//        TodayPresentationController(presentedViewController: presented, presenting: presenting)
-//    }
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        TodayPresentationController(presentedViewController: presented, presenting: presenting)
+    }
     
 }
 

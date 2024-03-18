@@ -22,9 +22,9 @@ class TodayViewController: UITableViewController {
             }
         }
     }
-    
+
     override var prefersStatusBarHidden: Bool { _statusBarIsHidden }
-    
+
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { .slide }
 
     override func viewDidLoad() {
@@ -67,7 +67,6 @@ class TodayViewController: UITableViewController {
         selectedCell = cell
 
         let detailVC = TodayDetailViewController()
-        detailVC.modalPresentationStyle = .fullScreen
         detailVC.imageView.image = cell.image
         detailVC.dismissCallback = { [weak self] in
             self?._statusBarIsHidden = false

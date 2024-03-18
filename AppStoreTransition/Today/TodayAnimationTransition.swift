@@ -60,9 +60,9 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
             toVC.imageView.frame.size = CGSize(width: windowWidth, height: 500.0)
             toVC.closeButton.alpha = 1.0
             
-//            let tabbar = fromVC.tabBar
-//            tabbar.alpha = 0.0
-//            tabbar.frame.origin.y = windowBounds.height
+            let tabbar = fromVC.tabBar
+            tabbar.alpha = 0.0
+            tabbar.frame.origin.y = windowBounds.height
         } completion: {
             transitionContext.completeTransition($0)
         }
@@ -82,12 +82,12 @@ extension TodayAnimationTransition: UIViewControllerAnimatedTransitioning {
             fromVC.imageView.frame.size = CGSize(width: windowWidth - 40.0, height: 410.0)
             fromVC.closeButton.alpha = 0.0
             
-//            let tabbar = toVC.tabBar
-//            tabbar.alpha = 1.0
-//            tabbar.frame.origin.y = windowBounds.height - tabbar.bounds.height
+            let tabbar = toVC.tabBar
+            tabbar.alpha = 1.0
+            tabbar.frame.origin.y = windowBounds.height - tabbar.bounds.height
         } completion: {
             transitionContext.completeTransition($0)
-//            toVC.view.addSubview(toVC.tabBar)
+            toVC.view.addSubview(toVC.tabBar)
         }
 
     }
